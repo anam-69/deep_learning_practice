@@ -1,4 +1,4 @@
-**DeepGuard: Multi-Layered Neural Fraud Detection**
+# **DeepGuard: Multi-Layered Neural Fraud Detection**
 
 
 **1. Project Overview & Mission**
@@ -8,7 +8,7 @@ Traditional fraud detection systems often rely on "Static Rules" (e.g., "Flag tr
 
 
 
-**2. The Real-World Problem vs. The Solution**
+## **2. The Real-World Problem vs. The Solution**
 The Problem: The "Silent" Fraud
 Modern fraud does not always look like a massive, one-time spending spree. Attackers now utilize:
 
@@ -23,7 +23,7 @@ DeepGuard solves this by treating every transaction not as an isolated event, bu
 
 
 
-**3. Data Engineering & Mathematical Foundation**
+## **3. Data Engineering & Mathematical Foundation**
 Raw data points, such as latitude and longitude, are rarely useful for Deep Learning in their raw form. This project features a robust feature engineering pipeline that transforms raw metadata into "High-Signal" behavioral features.
 
 
@@ -44,7 +44,7 @@ Amount Z-Score: A measure of how much the current transaction deviates from the 
 
 
 
-**4. Deep Learning Architecture**
+## **4. Deep Learning Architecture**
 The core engine of DeepGuard is a Multi-Layer Perceptron (MLP) built using the Keras Sequential API. It is designed to find non-linear correlations between spending habits and physical movement.
 
 Neural Network Layers:
@@ -60,7 +60,7 @@ Output Layer (1 unit): Uses a Sigmoid activation function to output a probabilit
 
 
 
-**5. Technical Challenges & Solutions**
+## **5. Technical Challenges & Solutions**
 Challenge 1: The "Needle in a Haystack" (Class Imbalance)
 In a real-world banking environment, 99.9% of transactions are legitimate. A model could achieve 99.9% accuracy by simply guessing "Not Fraud" every time, but it would catch zero fraud.
 
@@ -78,7 +78,7 @@ Solution: We implemented data-handling logic to initialize these features at zer
 
 
 
-**6. Performance Evaluation**
+## **6. Performance Evaluation**
 We evaluate DeepGuard using metrics that reflect business reality:
 
 ROC-AUC Score: This tells us how well the model separates the "Fraud" and "Normal" distributions.
@@ -89,7 +89,7 @@ Precision-Recall Trade-off: We tuned the model to ensure high Recall, as the cos
 
 
 
-**7. Future Roadmap**
+## **7. Future Roadmap**
 LSTM / GRU Integration: Moving from MLP to Recurrent Neural Networks to analyze the last 10–20 transactions as a continuous sequence.
 
 SHAP Interpretability: Adding a layer of "Explainable AI" so bank tellers can see why a transaction was flagged (e.g., "Flagged due to impossible velocity").
